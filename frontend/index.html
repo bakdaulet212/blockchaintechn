@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crowdfunding DApp</title>
+</head>
+
+<body>
+
+    <h2>Decentralized Crowdfunding</h2>
+
+    <button onclick="connectWallet()">Connect MetaMask</button>
+    <p id="account"></p>
+
+    <h3>Create Campaign</h3>
+    <input id="title" placeholder="Title">
+    <input id="goal" placeholder="Goal (wei)">
+    <input id="duration" placeholder="Duration (seconds)">
+    <button onclick="createCampaign()">Create</button>
+
+    <h3>Contribute</h3>
+    <input id="campaignId" placeholder="Campaign ID">
+    <input id="amount" placeholder="Amount (ETH)">
+    <button onclick="contribute()">Contribute</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
