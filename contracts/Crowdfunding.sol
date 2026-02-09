@@ -19,7 +19,7 @@ contract Crowdfunding {
     RewardToken public rewardToken;
 
     constructor() {
-        // деплоим токен и сразу делаем owner = Crowdfunding
+        
         rewardToken = new RewardToken(address(this));
     }
 
@@ -49,7 +49,7 @@ contract Crowdfunding {
         campaign.totalFunded += msg.value;
         contributions[_campaignId][msg.sender] += msg.value;
 
-        // 1 ETH = 100 RWT
+        
         uint256 rewardAmount = (msg.value * 100) / 1 ether;
         rewardToken.mint(msg.sender, rewardAmount);
     }
